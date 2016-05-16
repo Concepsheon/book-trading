@@ -1,0 +1,11 @@
+<div>
+     <% if (books) { %>
+     <div class="row">
+        <% for(var i=0; i < books.length; i++) { %>
+            <div class="col-sm-3">
+              <img src=<%= books[i].cover  %> alt="<%= books[i].cover %> book cover">
+            </div>
+          <% } %>
+     </div>
+     <% } %>
+</div>
