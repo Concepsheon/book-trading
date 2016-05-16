@@ -36,7 +36,13 @@ router.get("/", function(req,res){
     res.render("index");
 });
 
-router.post("/register",function(req,res){
+router.route("/register")
+
+.get(function(req,res){
+    res.render("register");
+})
+
+.post(function(req,res){
     Account.register(new Account({ username: req.body.username }), req.body.password, function(err,account){
         if(err){
             return console.log(err);

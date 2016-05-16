@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>title</title>
+    <title><%= account.username %>'s Profile</title>
     <meta name="author" content="Concepsheon Hall">
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
@@ -19,14 +19,19 @@
       
       <% include navbar %>
       
-      <h1><%= account.username %> Profile</h1>
-      
+      <div class="container">
+      <h1><%= account.username %>'s Profile</h1>
       <p>Full Name: <%= account.full_name %></p>
       <p>City: <%= account.city %></p>
       <p>State: <%= account.state %></p>
       
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#updateModal">Update Profile</button>
+      </div>
+      
       <div><a class="btn btn-default" href="/books">Back</a></div>
+
+      
+      
       
 
 <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
